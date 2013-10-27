@@ -24,8 +24,6 @@ logmsg "server started on port $port";
 
 my $paddr;
 
-$SIG{CHLD} = \&REAPER;
-
 my $client_fh;
 
 while (my $paddr = accept($client_fh, $socket)) { 
